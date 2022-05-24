@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/nav_switch_lang"
+        android:icon="@drawable/ic_lang"
+        android:title="@string/switch_lang"/>
+    <item
+        android:id="@+id/nav_group_add"
+        android:icon="@drawable/ic_group_add"
+        android:title="Add Group"/>
+    <item
+        android:id="@+id/nav_sync"
+        android:icon="@drawable/ic_sync"
+        android:title="Sync Notes"/>
+    <item
+        android:id="@+id/nav_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Trash"/>
+
+    <item  android:title="Prfile" >
+        <menu>
+            <item android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_profile"
+                android:title="Logout"/>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share"/>
+
+            <item android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate_review"
+                android:title="Rate Us"/>
+        </menu>
+    </item>
+
+
+</menu>

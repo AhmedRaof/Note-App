@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.example.yes.FragmentSplash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.yes.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentSignup"
+            app:destination="@id/fragmentSignup" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignup"
+        android:name="com.example.yes.FragmentSignup"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_fragmentSignup_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.yes.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentCreateNote"
+            app:destination="@id/fragmentCreateNote" />
+        <argument
+            android:name="note_title"
+            app:argType="string" />
+        <argument
+            android:name="note_content"
+            app:argType="string" />
+        <argument
+            android:name="note_date"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateNote"
+        android:name="com.example.yes.FragmentCreateNote"
+        android:label="fragment_create_note"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_fragmentCreateNote_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="note_title"
+            app:argType="string" />
+        <argument
+            android:name="note_content"
+            app:argType="string" />
+        <argument
+            android:name="note_date"
+            app:argType="string" />
+    </fragment>
+</navigation>
